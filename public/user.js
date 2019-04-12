@@ -1,7 +1,5 @@
 $(() => {
-    $('#viewCart').click(() => {
-        window.location.href = "./CartPage.html";
-    })
+
     $('#login').click(() => {
         $("#productList").empty()
         let name = $('#username').val()
@@ -17,7 +15,7 @@ $(() => {
                 viewCartBtn.setAttribute("value", "Show Cart");
                 viewCartBtn.setAttribute("class", "btn btn-primary");
                 viewCartBtn.addEventListener("click", () => {
-                    window.location = "http://localhost:8089//CartPage.html";
+                    window.location.href = "./CartPage.html";
                 })
                 body.appendChild(viewCartBtn);
                 console.log(data)
