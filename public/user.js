@@ -1,6 +1,6 @@
 $(() => {
     $('#viewCart').click(() => {
-        window.location = "http://localhost:8089//CartPage.html";
+        window.location = "../CartPage.html";
     })
     $('#login').click(() => {
         $("#productList").empty()

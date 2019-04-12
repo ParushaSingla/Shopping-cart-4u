@@ -31,7 +31,12 @@ $(() => {
     }
   
     refreshList()
-
+    $('#productButton').click(()=>{
+      window.location = window.location.href+"/product.html"; 
+    })
+    $('#userLogin').click(()=>{
+      window.location = window.location.href+"/user.html"; 
+    })
     $('#addtask').click(() => {
       $.post(
         '/todos',
