@@ -17,6 +17,7 @@ app.use(express.urlencoded({
 app.use('/',
   express.static(__dirname + '/public')
 )
+const PORT=process.env.PORT||8089
 
 app.use('/todos', vendorsR.routes)
 app.use('/addProduct',productR.Proutes)
@@ -24,6 +25,8 @@ app.use('/user',userR.Uroutes)
 app.use('/addToCart',cartR.Croutes)
 db.sync()
   .then(() => {
-    app.listen(8089)
+    app.listen(PORT,()=>{
+      console.log(`started at localhost:http://localhost:${PORT}`)
+    })
   })
 

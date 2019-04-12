@@ -1,6 +1,5 @@
 $(() => {
     $('#viewCart').click(() => {
-        console.log("reached");
         window.location = "http://localhost:8089//CartPage.html";
     })
     $('#login').click(() => {
@@ -11,18 +10,16 @@ $(() => {
                 alert("not valid")
             else {
                 window.localStorage.setItem('userId', data[0].id)
-               
-                // $("#productList").append(` <button id="viewCart" class="btn btn-primary">viewCart </button>`)
                 createList(data)
-                let viewCartBtn = document.createElement("input");
-let body=document.querySelector("#body")
-viewCartBtn.setAttribute("type","button");
-viewCartBtn.setAttribute("value","Show Cart");
-viewCartBtn.setAttribute("class", "btn btn-primary");
-viewCartBtn.addEventListener("click", () => {
-window.location = "http://localhost:8089//CartPage.html";
-})
-body.appendChild(viewCartBtn); 
+                let viewCartBtn = document.createElement("input");
+                let body = document.querySelector("#productList")
+                viewCartBtn.setAttribute("type", "button");
+                viewCartBtn.setAttribute("value", "Show Cart");
+                viewCartBtn.setAttribute("class", "btn btn-primary");
+                viewCartBtn.addEventListener("click", () => {
+                    window.location = "http://localhost:8089//CartPage.html";
+                })
+                body.appendChild(viewCartBtn);
                 console.log(data)
             }
         })
@@ -55,21 +52,18 @@ body.appendChild(viewCartBtn);
                 newDiv.append(br4)
                 newDiv.append(button)
                 $("#productList").append(newDiv)
- 
+
 
                 $('#' + product.id).click(() => {
-                    // console.log(product.id)
-                    // console.log(user[0].id)
                     $.post(`/addToCart/${product.id}_${user[0].id}`)
                     alert("Added To Your Cart SuccessFully")
-                    // refreshList()
                 })
             }
         })
 
     }
 
-   
+
 
 
 })
