@@ -32,7 +32,7 @@ $(() => {
 
   refreshList()
   $('#vendorButton').click(() => {
-    window.location = window.location.href +;
+    window.location = window.location.href ;
     // window.location = "http://localhost:8089";
   })
   $('#productButton').click(() => {
