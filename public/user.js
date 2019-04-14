@@ -1,5 +1,16 @@
 $(() => {
-
+    $('#vendorButton').click(() => {
+        // window.location = window.location.href + "/product.html";
+        window.location = "http://localhost:8089";
+    })
+    $('#productButton').click(() => {
+      // window.location = window.location.href + "/product.html";
+      window.location = "http://localhost:8089/product.html";
+    })
+    $('#userLogin').click(() => {
+        // window.location = window.location.href + "/user.html";
+        window.location = "http://localhost:8089/user.html";
+    })
     $('#login').click(() => {
         $("#productList").empty()
         let name = $('#username').val()
@@ -37,7 +48,7 @@ $(() => {
                 br2 = document.createElement("br")
                 br3 = document.createElement("br")
                 br4 = document.createElement("br")
-                newDiv.setAttribute("class", "col-4 card mx-2 p-4 ")
+                newDiv.setAttribute("class", "card bg-light")
 
 
                 newDiv.append(`Product Name::   ` + product.name)

@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <style>
+        .content {
+            max-width: 1000px;
+            margin: auto;
+        }
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -21,16 +28,30 @@
     <script src="user.js"></script>
 
 </head>
-<h1>User Login</h1>
-
 
 <body id="body">
-    <input id="username" placeholder="user name">
-    <br><br>
-    <button id="login" class="btn btn-primary"> Login </button> 
-    <!-- <button id="viewCart" class="btn btn-primary">viewCart </button> -->
-    <br><br>
- <div id="productList" class="row"></div>
+    <div class="content">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                    <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg"
+                            id="vendorButton">Vendor</button></li>
+                    <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg"
+                            id="productButton">Product</button></li>
+                    <li class="nav-link"> <button type="button" class="btn btn-secondary btn-lg"
+                            id="userLogin">Login</button></li>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <h1>User Login</h1>
+        <input id="username" placeholder="user name">
+        <br><br>
+        <button id="login" class="btn btn-primary"> Login </button>
+        <br><br>
+        <div id="productList" class="card-columns"></div>
 
 </body>
 

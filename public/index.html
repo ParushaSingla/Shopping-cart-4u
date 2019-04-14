@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .content {
+          max-width: 1000px;
+          margin: auto;
+        }
+        </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -12,14 +21,25 @@
   <script src="jquery.js"></script>
   <script src="vendorList.js"></script>
 </head>
-<body>
-   <button id="productButton">See Product</button>
-    <br><br>
-    <button id="userLogin">User Login</button>
+<body class="content">
+    
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                    <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg"
+                            id="vendorButton">Vendor</button></li>
+                    <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg"
+                            id="productButton">Product</button></li>
+                    <li class="nav-link"> <button type="button" class="btn btn-secondary btn-lg"
+                            id="userLogin">Login</button></li>
+                    </li>
+                </ul>
+          </div>
+          </div>
   <h1>Vendors</h1>
 
-  <input id="taskname" placeholder="task name">
-  <br>
+  <input id="taskname" placeholder="task name">&nbsp&nbsp
   <button id="addtask" class="btn btn-primary"> Add Vendor </button><br><br>
   <h1>List Of Vendors</h1>
   <ul id="tasklist" class="list-group">

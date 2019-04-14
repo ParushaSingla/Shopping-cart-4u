@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: auto;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
   <script src="jquery.js"></script>
   <script src="productList.js"></script>
 </head>
-<body>
+
+<body class="content">
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+        <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg" id="vendorButton">Vendor</button>
+        </li>
+        <li class="nav-link"><button type="button" class="btn btn-secondary btn-lg" id="productButton">Product</button>
+        </li>
+        <li class="nav-link"> <button type="button" class="btn btn-secondary btn-lg" id="userLogin">Login</button></li>
+        </li>
+      </ul>
+    </div>
+  </div>
   <h1>Products</h1>
   <div class="form-group">
-      <label for="exampleInputEmail1" >Product Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="productname"  placeholder="product name">
-  <br>
-  <label for="exampleInputEmail1" >Product Price</label>&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="price" placeholder="product price">
-  <br>
-  <label for="exampleInputEmail1" >Product Quantity</label>&nbsp;&nbsp;&nbsp;&nbsp;
-  <input id="quantity" placeholder="product quantity">
-  <br>
-  <select name="vendorList" id="vendorList">
+    <label for="exampleInputEmail1">Product Name</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="productname" placeholder="product name">
+    <br>
+    <label for="exampleInputEmail1">Product Price</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="price" placeholder="product price">
+    <br>
+    <label for="exampleInputEmail1">Product Quantity</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="quantity" placeholder="product quantity">
+    <br>
+    <select name="vendorList" id="vendorList">
 
-  </select>&nbsp;&nbsp;&nbsp;&nbsp;
-  <button id="addproduct" class="btn btn-primary"> Add Product </button>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="addproduct" class="btn btn-primary"> Add Product </button>
   </div>
- 
+
   <table id="productTable" class="table table-bordered">
 
   </table>
   <!-- <h1>hello</h1> -->
 </body>
+
 </html>
