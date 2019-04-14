@@ -1,14 +1,14 @@
 $(() => {
     $('#vendorButton').click(() => {
-        window.location = window.location.href ;
+        window.location = window.location.protocol + "//" + window.location.host + "/" ;
        // window.location = "http://localhost:8089";
     })
     $('#productButton').click(() => {
-      window.location = window.location.href + "/product.html";
+      window.location = window.location.protocol + "//" + window.location.host + "/product.html";
     //   window.location = "http://localhost:8089/product.html";
     })
     $('#userLogin').click(() => {
-         window.location = window.location.href + "/user.html";
+         window.location =window.location.href ;
         // window.location = "http://localhost:8089/user.html";
     })
     $('#login').click(() => {
